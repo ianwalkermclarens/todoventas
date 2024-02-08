@@ -1,8 +1,6 @@
-import sys,os
+import sys
+import os
 
 dirname = os.path.dirname(__file__)
 
 print(dirname)
-
-
-

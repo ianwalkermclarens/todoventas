@@ -7,13 +7,6 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import os
-from PyQt6.QtGui import QFont, QFontDatabase
-
-dirnames = os.path.dirname(__file__)
-id = QFontDatabase.addApplicationFont(os.path.join(dirnames,"ttf","idealist_sans.ttf"))
-if id < 0: print("Error")
-families = QFontDatabase.applicationFontFamilies(id)
 
 
 class Ui_uix_login(object):
@@ -30,51 +23,55 @@ class Ui_uix_login(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=uix_login)
         self.label_2.setGeometry(QtCore.QRect(380, 10, 301, 41))
-        font = QtGui.QFont(families)
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(20)
         self.label_2.setFont(font)
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=uix_login)
-        self.label_3.setGeometry(QtCore.QRect(360, 70, 131, 31))
-        font = QtGui.QFont(families)
+        self.label_3.setGeometry(QtCore.QRect(370, 70, 131, 31))
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(15)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(parent=uix_login)
-        self.label_4.setGeometry(QtCore.QRect(360, 120, 131, 31))
-        font = QtGui.QFont(families)
+        self.label_4.setGeometry(QtCore.QRect(370, 120, 131, 31))
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(15)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
-        self.txtUser = QtWidgets.QLineEdit(parent=uix_login)
-        self.txtUser.setGeometry(QtCore.QRect(492, 70, 191, 31))
-        font = QtGui.QFont(families)
+        self.lineEdit = QtWidgets.QLineEdit(parent=uix_login)
+        self.lineEdit.setGeometry(QtCore.QRect(492, 70, 191, 31))
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(14)
-        self.txtUser.setFont(font)
-        self.txtUser.setStyleSheet("border-radius: 4px;\n"
+        self.lineEdit.setFont(font)
+        self.lineEdit.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;")
-        self.txtUser.setObjectName("txtUser")
-        self.txtPass = QtWidgets.QLineEdit(parent=uix_login)
-        self.txtPass.setGeometry(QtCore.QRect(490, 120, 191, 31))
-        font = QtGui.QFont(families)
-
+        self.lineEdit.setObjectName("lineEdit")
+        self.lineEdit_2 = QtWidgets.QLineEdit(parent=uix_login)
+        self.lineEdit_2.setGeometry(QtCore.QRect(490, 120, 191, 31))
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(14)
-        self.txtPass.setFont(font)
-        self.txtPass.setStyleSheet("border-radius: 4px;\n"
+        self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;")
-        self.txtPass.setObjectName("txtPass")
-        self.btnAcceder = QtWidgets.QPushButton(parent=uix_login)
-        self.btnAcceder.setGeometry(QtCore.QRect(430, 200, 191, 32))
-        font = QtGui.QFont(families)
-
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.pushButton = QtWidgets.QPushButton(parent=uix_login)
+        self.pushButton.setGeometry(QtCore.QRect(430, 200, 191, 32))
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(15)
-        self.btnAcceder.setFont(font)
-        self.btnAcceder.setStyleSheet("border-radius: 4px;\n"
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;\n"
 "background-color:rgb(237,133,39);\n"
 "color:white;")
-        self.btnAcceder.setObjectName("btnAcceder")
+        self.pushButton.setObjectName("pushButton")
 
         self.retranslateUi(uix_login)
         QtCore.QMetaObject.connectSlotsByName(uix_login)
@@ -85,4 +82,4 @@ class Ui_uix_login(object):
         self.label_2.setText(_translate("uix_login", "Inicio de sesión"))
         self.label_3.setText(_translate("uix_login", "Usuario"))
         self.label_4.setText(_translate("uix_login", "Contraseña"))
-        self.btnAcceder.setText(_translate("uix_login", "Acceder"))
+        self.pushButton.setText(_translate("uix_login", "Acceder"))

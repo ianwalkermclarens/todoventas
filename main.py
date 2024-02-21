@@ -1,6 +1,11 @@
-import sys
-import os
+from PyQt6.QtWidgets import QApplication
+from gui.login import Login
 
-dirname = os.path.dirname(__file__)
+class AppMain():
+    def __init__(self):
+        self.app = QApplication([])
+        self.login = Login()
+        super().__init__()
+        self.app.exec()
 
-print(dirname)
+app = AppMain()

@@ -7,10 +7,21 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+import os
+
 
 
 class Ui_uix_login(object):
     def setupUi(self, uix_login):
+        ROOT_DIR = os.path.abspath(os.curdir)
+        dirname_ttf = os.path.join(ROOT_DIR,"gui","ttf","Idealist_Sans_Light.ttf")
+        id = QtGui.QFontDatabase.addApplicationFont(dirname_ttf)
+        print(dirname_ttf)
+        if id < 0: print("Error")
+        families = QtGui.QFontDatabase.applicationFontFamilies(id)
+        print(families)
+ 
+
         uix_login.setObjectName("uix_login")
         uix_login.resize(707, 263)
         uix_login.setMaximumSize(QtCore.QSize(707, 263))

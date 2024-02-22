@@ -34,10 +34,10 @@ class Ui_uix_login(object):
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=uix_login)
         self.label_2.setGeometry(QtCore.QRect(380, 10, 301, 41))
-        font = QtGui.QFont(families)
-        
+        font = QtGui.QFont()
+        font.setFamily("Idealist Sans")
         font.setPointSize(20)
-        self.label_2.setFont(font)
+        self.label_2.setFont(QtGui.QFont(families, 30))
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=uix_login)

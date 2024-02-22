@@ -156,6 +156,9 @@ border:1px solid black;</string>
      <pointsize>15</pointsize>
     </font>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">border-radius: 4px;
 border:1px solid black;

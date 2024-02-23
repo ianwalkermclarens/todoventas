@@ -1,0 +1,44 @@
+
+
+import os
+from PyQt6 import uic
+from PyQt6.QtWidgets import QMessageBox, QDialog, QDialogButtonBox
+from data.usuario import UsuarioData
+from gui.main import MainWindow
+from model.usuario import Usuario
+from gui.interfaces.login import Ui_Dialog
+
+basedir = os.path.dirname(__file__)
+
+class Login(QDialog,Ui_Dialog):
+    def __init__(self):
+        
+        self.swap = QDialog()
+        self.login = Ui_Dialog()
+        self.login.setupUi(self.swap)
+        self.initGUI()
+        self.swap.exec()
+            
+    def ingresar(self):
+        if len(self.login.txtUsuario.text())<2: 
+            self.login.lblMensaje.setText("Ingrese un usuario valido")
+            self.login.txtUsuario.setFocus()
+        elif len(self.login.txtPassword.text())<2:
+            self.login.lblMensaje.setText("Ingrese un usuario valido")
+            self.login.txtPassword.setFocus()
+        else:
+            self.login.lblMensaje.setText("")
+            usu = Usuario(usuario=self.login.txtUsuario.text() ,clave = self.login.txtPassword.text())
+            print("se crea la variable usu =",usu.usuario,usu.clave)
+            usuData = UsuarioData()
+            respuesta = usuData.login(usu)
+            if respuesta:
+                self.main = MainWindow()
+                self.swap.close()
+            else:
+                self.login.lblMensaje.setText("Datos de acceso incorrecto")
+
+
+    def initGUI(self):
+        self.login.lblMensaje.setText("")
+        self.login.btnAcceder.clicked.connect(self.ingresar)

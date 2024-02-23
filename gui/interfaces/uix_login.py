@@ -18,10 +18,10 @@ class Ui_uix_login(object):
         dirname_img = os.path.join(ROOT_DIR,"gui","images")
 
         id = QtGui.QFontDatabase.addApplicationFont(dirname_ttf)
-        print(dirname_ttf)
+        #print(dirname_ttf)
         if id < 0: print("Error")
         families = QtGui.QFontDatabase.applicationFontFamilies(id)
-        print(families)
+        #print(families)
  
 
         uix_login.setObjectName("uix_login")
@@ -62,15 +62,16 @@ class Ui_uix_login(object):
         self.lineEdit_2.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;")
         self.lineEdit_2.setObjectName("lineEdit_2")
-        self.pushButton = QtWidgets.QPushButton(parent=uix_login)
-        self.pushButton.setGeometry(QtCore.QRect(430, 200, 191, 32))
+        self.btnAcceder = QtWidgets.QPushButton(parent=uix_login)
+        self.btnAcceder.setGeometry(QtCore.QRect(430, 200, 191, 32))
 
-        self.pushButton.setFont(QtGui.QFont(families,15))
-        self.pushButton.setStyleSheet("border-radius: 4px;\n"
+        self.btnAcceder.setFont(QtGui.QFont(families,15))
+        self.btnAcceder.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;\n"
 "background-color:rgb(237,133,39);\n"
 "color:white;")
-        self.pushButton.setObjectName("pushButton")
+        self.btnAcceder.setObjectName("btnAcceder")
+        self.btnAcceder.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
 
         self.retranslateUi(uix_login)
         QtCore.QMetaObject.connectSlotsByName(uix_login)
@@ -81,4 +82,4 @@ class Ui_uix_login(object):
         self.label_2.setText(_translate("uix_login", "Inicio de sesión"))
         self.label_3.setText(_translate("uix_login", "Usuario"))
         self.label_4.setText(_translate("uix_login", "Contraseña"))
-        self.pushButton.setText(_translate("uix_login", "Acceder"))
+        self.btnAcceder.setText(_translate("uix_login", "Acceder"))

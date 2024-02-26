@@ -19,13 +19,21 @@ class database:
 		self.numberRows = 0
 
 		#self.modelo_db = model_db(db_host ='mysql-38c2c1c5-banco.a.aivencloud.com',db_user = 'avnadmin',db_password = 'AVNS_Z95SOUCgT5Kcadl2O9C',db_name = 'defaultdb',db_port = "23529")
-
+"""
 		self.modelo_db = model_db(
 			db_host ='127.0.0.1',
 			db_user = 'root',
 			db_password = 'Delacruz1982-',
 			db_name = 'todoventas',
-			db_port ="3306")		
+			db_port ="3306")
+"""
+
+		self.modelo_db = model_db(
+			db_host ='mysql-38c2c1c5-banco.a.aivencloud.com',
+			db_user = 'avnadmin',
+			db_password = 'AVNS_Z95SOUCgT5Kcadl2O9C',
+			db_name = 'defaultdb',
+			db_port ="23529")
 
 
 		#self.whost ='mysql-38c2c1c5-banco.a.aivencloud.com'

@@ -20,7 +20,12 @@ class database:
 
 		#self.modelo_db = model_db(db_host ='mysql-38c2c1c5-banco.a.aivencloud.com',db_user = 'avnadmin',db_password = 'AVNS_Z95SOUCgT5Kcadl2O9C',db_name = 'defaultdb',db_port = "23529")
 
-		self.modelo_db = model_db(db_host ='127.0.0.1',db_user = 'root',db_password = 'Delacruz1982-',db_name = 'todoventas',db_port ="3306")		
+		self.modelo_db = model_db(
+			db_host ='127.0.0.1',
+			db_user = 'root',
+			db_password = 'Delacruz1982-',
+			db_name = 'todoventas',
+			db_port ="3306")		
 
 
 		#self.whost ='mysql-38c2c1c5-banco.a.aivencloud.com'
@@ -34,15 +39,22 @@ class database:
 
 
 	def db_connecion(self):
-	    try:
-	        connection = mysql.connector.connect(host=self.modelo_db.db_host,user=self.modelo_db.db_user,passwd=self.modelo_db.db_password,db=self.modelo_db.db_name,port=self.modelo_db.db_port,auth_plugin='mysql_native_password')
-	        if connection.is_connected():
-	            return connection
-	        else:
-	            return None
-	    except Error as e:
-	        print(f"Error al conectarse a MySQL -  {e}")
-	        return None
+
+		try:
+			connection = mysql.connector.connect(
+				host=self.modelo_db.db_host,
+				user=self.modelo_db.db_user,
+				passwd=self.modelo_db.db_password,
+				db=self.modelo_db.db_name,
+				port=self.modelo_db.db_port,
+				auth_plugin='mysql_native_password')
+			if connection.is_connected():
+				return connection
+			else:
+				return None
+		except Error as e:
+			print(f"Error al conectarse a MySql -  {e}")
+			return None
 
 
 	def getRows(self,sqlTXT):

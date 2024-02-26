@@ -8,22 +8,13 @@
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 import os
+from librery.file_sources import file_sources
 
 
 
 class Ui_uix_login(object):
     def setupUi(self, uix_login):
-        ROOT_DIR = os.path.abspath(os.curdir)
-        dirname_ttf = os.path.join(ROOT_DIR,"gui","ttf","Idealist_Sans_Light.ttf")
-        dirname_img = os.path.join(ROOT_DIR,"gui","images")
-
-        id = QtGui.QFontDatabase.addApplicationFont(dirname_ttf)
-        #print(dirname_ttf)
-        if id < 0: print("Error")
-        families = QtGui.QFontDatabase.applicationFontFamilies(id)
-        #print(families)
- 
-
+        sources = file_sources()
         uix_login.setObjectName("uix_login")
         uix_login.resize(707, 263)
         uix_login.setMaximumSize(QtCore.QSize(707, 263))
@@ -31,41 +22,42 @@ class Ui_uix_login(object):
         self.label = QtWidgets.QLabel(parent=uix_login)
         self.label.setGeometry(QtCore.QRect(0, 0, 331, 261))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(os.path.join(dirname_img,"logoApp.jpg")))
+        self.label.setPixmap(QtGui.QPixmap(os.path.join(sources.dirname_img,"logoApp.jpg")))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=uix_login)
         self.label_2.setGeometry(QtCore.QRect(380, 10, 301, 41))
-        self.label_2.setFont(QtGui.QFont(families, 20))
+        self.label_2.setFont(QtGui.QFont(sources.families, 25))
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=uix_login)
         self.label_3.setGeometry(QtCore.QRect(370, 70, 131, 31))
 
-        self.label_3.setFont(QtGui.QFont(families, 12))
+        self.label_3.setFont(QtGui.QFont(sources.families, 16))
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(parent=uix_login)
         self.label_4.setGeometry(QtCore.QRect(370, 120, 131, 31))
 
-        self.label_4.setFont(QtGui.QFont(families, 12))
+        self.label_4.setFont(QtGui.QFont(sources.families, 16))
         self.label_4.setObjectName("label_4")
-        self.lineEdit = QtWidgets.QLineEdit(parent=uix_login)
-        self.lineEdit.setGeometry(QtCore.QRect(492, 70, 191, 31))
+        self.txtUser = QtWidgets.QLineEdit(parent=uix_login)
+        self.txtUser.setGeometry(QtCore.QRect(492, 70, 191, 31))
 
-        self.lineEdit.setFont(QtGui.QFont(families, 14))
-        self.lineEdit.setStyleSheet("border-radius: 4px;\n"
+        self.txtUser.setFont(QtGui.QFont(sources.families, 15))
+        self.txtUser.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;")
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(parent=uix_login)
-        self.lineEdit_2.setGeometry(QtCore.QRect(490, 120, 191, 31))
-        self.lineEdit_2.setFont(QtGui.QFont(families, 14))
-        self.lineEdit_2.setStyleSheet("border-radius: 4px;\n"
+        self.txtUser.setObjectName("txtUser")
+        self.txtPassword = QtWidgets.QLineEdit(parent=uix_login)
+        self.txtPassword.setGeometry(QtCore.QRect(490, 120, 191, 31))
+        self.txtPassword.setFont(QtGui.QFont(sources.families, 20))
+        self.txtPassword.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;")
-        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.txtPassword.setEchoMode(QtWidgets.QLineEdit.EchoMode.Password)
+        self.txtPassword.setObjectName("txtPassword")
         self.btnAcceder = QtWidgets.QPushButton(parent=uix_login)
         self.btnAcceder.setGeometry(QtCore.QRect(430, 200, 191, 32))
 
-        self.btnAcceder.setFont(QtGui.QFont(families,15))
+        self.btnAcceder.setFont(QtGui.QFont(sources.families,15))
         self.btnAcceder.setStyleSheet("border-radius: 4px;\n"
 "border:1px solid black;\n"
 "background-color:rgb(237,133,39);\n"

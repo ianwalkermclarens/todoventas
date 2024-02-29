@@ -1,8 +1,12 @@
-import os
+import os,re
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox, QDialog, QDialogButtonBox
+from PyQt6.QtGui import QValidator,QRegularExpressionValidator
+from PyQt6.QtCore import QRegularExpression
 from data.data_usuario import data_usuario
 from gui.mainWindow import MainWindow
+from librery.input_datas import input_datasMails, input_datasNumbers, input_datasPassword
+
 from model.model_usuario import model_usuario
 from gui.interfaces.uix_login import Ui_uix_login
 from librery.alerts import alerts
@@ -10,13 +14,20 @@ from librery.alerts import alerts
 
 basedir = os.path.dirname(__file__)
 
+
+
+
 class Login(QDialog,Ui_uix_login):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
         self.btnAcceder.clicked.connect(self.ingresar)
+        self.txtUser.setValidator(input_datasMails())
+        #self.txtUser.setValidator(input_datasPassword())        
         #self.btnAcceder.clicked.connect(self.ingresar)
         self.show()
+
+    
 
     def ingresar(self):
         if self.txtUser.text()=="":
@@ -29,7 +40,6 @@ class Login(QDialog,Ui_uix_login):
             modelo_usuario = model_usuario(nombre_usuario="",username=self.txtUser.text(),password=self.txtPassword.text())
             datos_usuario=data_usuario()
             respuesta = datos_usuario.login(modelo_usuario)
-            
 
 
             #self.main = MainWindow()

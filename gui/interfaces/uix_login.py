@@ -8,7 +8,7 @@
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 import os
-from librery.file_sources import file_sources
+from file_sources import file_sources
 
 
 

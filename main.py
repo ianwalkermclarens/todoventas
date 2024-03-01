@@ -11,7 +11,6 @@ class AppMain():
     def __init__(self):
         self.app = QApplication(sys.argv)
         self.app.setWindowIcon(QIcon(os.path.join(basedir, "icons", "icon.svg")))
-
         self.login = Login()
         super().__init__()
         self.app.exec()

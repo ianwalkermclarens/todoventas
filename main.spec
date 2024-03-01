@@ -24,7 +24,7 @@ exe = EXE(pyz,
           a.scripts,
           [],
           exclude_binaries=True,
-          name='hello-world',
+          name='todoventas',
           icon='icons/icon.ico',
           debug=False,
           bootloader_ignore_signals=False,
@@ -44,7 +44,7 @@ coll = COLLECT(exe,
                upx_exclude=[],
                name='hello-world')
 app = BUNDLE(coll,
-             name='Hello World.app',
+             name='todoventas.app',
              icon='icons/icon.icns',
              bundle_identifier=None)
 

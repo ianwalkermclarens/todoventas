@@ -6,22 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>481</width>
-    <height>679</height>
+    <width>415</width>
+    <height>491</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>415</width>
+    <height>538</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color:white;</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>461</width>
+     <width>391</width>
      <height>31</height>
     </rect>
    </property>
@@ -46,11 +52,16 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>80</y>
+     <x>20</x>
+     <y>70</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>Razon social</string>
@@ -59,21 +70,35 @@
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>80</y>
+     <x>150</x>
+     <y>70</y>
      <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>130</y>
+     <x>20</x>
+     <y>110</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>R.F.C</string>
@@ -82,44 +107,72 @@
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>130</y>
+     <x>150</x>
+     <y>110</y>
      <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>420</y>
+     <x>20</x>
+     <y>310</y>
      <width>131</width>
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
    <property name="text">
-    <string>Direccion</string>
+    <string>Dirección</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_3">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>420</y>
+     <x>150</x>
+     <y>310</y>
      <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>470</y>
+     <x>20</x>
+     <y>350</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>Numero ext.</string>
@@ -128,21 +181,35 @@
   <widget class="QLineEdit" name="lineEdit_4">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>470</y>
+     <x>150</x>
+     <y>350</y>
      <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>520</y>
+     <x>20</x>
+     <y>390</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>Numero int.</string>
@@ -151,21 +218,35 @@
   <widget class="QLineEdit" name="lineEdit_5">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>520</y>
+     <x>150</x>
+     <y>390</y>
      <width>241</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>200</y>
+     <x>20</x>
+     <y>150</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>Codigo Postal</string>
@@ -174,90 +255,146 @@
   <widget class="QLineEdit" name="lineEdit_6">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>200</y>
+     <x>150</x>
+     <y>150</y>
      <width>241</width>
      <height>31</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>250</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
-   <property name="text">
-    <string>Estado</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>250</y>
-     <width>104</width>
-     <height>26</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>300</y>
+     <x>20</x>
+     <y>190</y>
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Estado</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="txtEstado">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>190</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>New Item</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
    <property name="text">
     <string>Municipio</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="textMonicipio">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>300</y>
-     <width>104</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_10">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>350</y>
-     <width>131</width>
+     <x>150</x>
+     <y>230</y>
+     <width>241</width>
      <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Colonia</string>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
    </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox_3">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>360</y>
-     <width>104</width>
-     <height>26</height>
-    </rect>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
    </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>New Item</string>
+    </property>
+   </item>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>600</y>
-     <width>113</width>
+     <x>20</x>
+     <y>440</y>
+     <width>161</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;
+background-color:rgb(223,31,41);
+color:white;</string>
    </property>
    <property name="text">
     <string>Cancelar</string>
@@ -266,17 +403,95 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>600</y>
-     <width>113</width>
+     <x>220</x>
+     <y>440</y>
+     <width>161</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;
+background-color:rgb(237,133,39);
+color:white;</string>
    </property>
    <property name="text">
     <string>Guardar</string>
    </property>
   </widget>
+  <widget class="QComboBox" name="txtColonia">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>270</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 4px;
+border:1px solid black;</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>New Item</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Idealist Sans</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>Colonia</string>
+   </property>
+  </widget>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>lineEdit_2</tabstop>
+  <tabstop>lineEdit_6</tabstop>
+  <tabstop>txtEstado</tabstop>
+  <tabstop>textMonicipio</tabstop>
+  <tabstop>txtColonia</tabstop>
+  <tabstop>lineEdit_3</tabstop>
+  <tabstop>lineEdit_4</tabstop>
+  <tabstop>lineEdit_5</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -22,7 +22,7 @@ class Ui_uix_login(object):
         self.label = QtWidgets.QLabel(parent=uix_login)
         self.label.setGeometry(QtCore.QRect(0, 0, 331, 261))
         self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap(os.path.join(sources.dirname_img,"logoApp.jpg")))
+        self.label.setPixmap(QtGui.QPixmap(os.path.join(sources.dirname_img,"icon.png")))
         self.label.setScaledContents(True)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=uix_login)

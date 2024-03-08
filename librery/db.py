@@ -29,6 +29,14 @@ class database:
 			db_port ="23529")
 
 
+		self.modelo_db = model_db(
+			db_host ='localhost',
+			db_user = 'root',
+			db_password = 'Delacruz1982-',
+			db_name = 'todoventas',
+			db_port ="3306")
+
+
 		#self.whost ='mysql-38c2c1c5-banco.a.aivencloud.com'
 		#self.wuser = 'avnadmin'
 		#self.wpasswd = 'AVNS_Z95SOUCgT5Kcadl2O9C'

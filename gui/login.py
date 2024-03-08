@@ -1,4 +1,4 @@
-import os,re
+import os,re,json
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox, QDialog, QDialogButtonBox
 from PyQt6.QtGui import QValidator,QRegularExpressionValidator
@@ -22,7 +22,7 @@ class Login(QDialog,Ui_uix_login):
         super().__init__()
         self.setupUi(self)
         self.btnAcceder.clicked.connect(self.ingresar)
-        self.txtUser.setValidator(input_datasMails())
+        #self.txtUser.setValidator(input_datasMails())
         #self.txtUser.setValidator(input_datasPassword())        
         #self.btnAcceder.clicked.connect(self.ingresar)
         self.show()
@@ -41,6 +41,17 @@ class Login(QDialog,Ui_uix_login):
             datos_usuario=data_usuario()
             respuesta = datos_usuario.login(modelo_usuario)
 
+            if respuesta!=None:
+                info = json.loads(respuesta)
+                #print(info)
+                self.main = MainWindow(info[0]["nombre_usuario"],info[0]["idkey_tipo_usuarios"])
+                self.close()
+
+            else:
+                alerts("Error usuario o contraseña incorrecta")
+
+
+            print(respuesta)            
 
             #self.main = MainWindow()
             #self.close()

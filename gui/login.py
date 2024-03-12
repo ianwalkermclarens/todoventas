@@ -1,11 +1,8 @@
-import os,re,json
-from PyQt6 import uic
-from PyQt6.QtWidgets import QMessageBox, QDialog, QDialogButtonBox
-from PyQt6.QtGui import QValidator,QRegularExpressionValidator
-from PyQt6.QtCore import QRegularExpression
+import os,json
+from PyQt6.QtWidgets import QDialog
 from data.data_usuario import data_usuario
 from gui.mainWindow import MainWindow
-from librery.input_datas import input_datasMails, input_datasNumbers, input_datasPassword
+
 
 from model.model_usuario import model_usuario
 from gui.interfaces.uix_login import Ui_uix_login
@@ -51,7 +48,7 @@ class Login(QDialog,Ui_uix_login):
                 alerts("Error usuario o contraseña incorrecta")
 
 
-            print(respuesta)            
+            #print(respuesta)            
 
             #self.main = MainWindow()
             #self.close()

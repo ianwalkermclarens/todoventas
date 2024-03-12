@@ -2,6 +2,17 @@ import re
 from PyQt6.QtGui import QValidator
 
 
+class input_datasNothing(QValidator):
+    def validate(self,string,index):
+        pattern = re.compile("\t\n")
+        if string=="":
+            return QValidator.State.Acceptable, string, index
+        if pattern.fullmatch(string):
+            return QValidator.State.Acceptable, string, index
+        else:
+            return QValidator.State.Invalid, string, index
+
+
 class input_datasNumbers(QValidator):
     def validate(self,string,index):
         pattern = re.compile("[0-9]+")
@@ -31,6 +42,27 @@ class input_datasMails(QValidator):
 class input_datasPassword(QValidator):
     def validate(self,string,index):
         pattern = re.compile("[a-zA-Z0-9_]+")
+        if string=="":
+            return QValidator.State.Acceptable, string, index
+        if pattern.fullmatch(string):
+            return QValidator.State.Acceptable, string, index
+        else:
+            return QValidator.State.Invalid, string, index
+
+
+class input_datasTXT(QValidator):
+    def validate(self,string,index):
+        pattern = re.compile("[a-zA-Z0-9_ ]+")
+        if string=="":
+            return QValidator.State.Acceptable, string, index
+        if pattern.fullmatch(string):
+            return QValidator.State.Acceptable, string, index
+        else:
+            return QValidator.State.Invalid, string, index
+
+class input_datasRFC(QValidator):
+    def validate(self,string,index):
+        pattern = re.compile("[a-zA-Z0-9]+")
         if string=="":
             return QValidator.State.Acceptable, string, index
         if pattern.fullmatch(string):

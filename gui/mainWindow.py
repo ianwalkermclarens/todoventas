@@ -1,10 +1,12 @@
 import os
-from PyQt6 import uic
-from PyQt6.QtGui import QAction, QIcon,QFont
+from PyQt6.QtGui import QIcon,QFont,QKeySequence
 from PyQt6.QtCore import Qt, QSize
-from PyQt6.QtWidgets import QMessageBox, QWidget, QPushButton, QMainWindow,QToolBar,QVBoxLayout,QHBoxLayout,QToolButton
+from PyQt6.QtWidgets import QWidget, QMainWindow,QToolBar,QHBoxLayout,QToolButton
 from gui.interfaces.uix_mainWindow import Ui_MainWindow
+from gui.information_company import information_company
 from file_sources import file_sources
+from librery.confirm import confirms
+
 
 basedir = os.path.dirname(__file__)
 
@@ -12,6 +14,9 @@ class MainWindow(QMainWindow,Ui_MainWindow):
     def __init__(self,nombre_usuario,idkey_tipo_usuarios):
         super().__init__()
         self.setupUi(self)
+        self.actionSalir.setShortcut(QKeySequence("Ctrl+X"))
+        self.actionSalir.triggered.connect(self.exitApp)
+
         self.setStyleSheet("color: black;"
 "background-color: white;font-size:15px;");
         sources = file_sources()
@@ -33,7 +38,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         button_action.setIcon(QIcon(os.path.join(sources.dirname_img,"ventas.png")))
         button_action.setIconSize(QSize(48,48))
         button_action.setStatusTip("Ventas")
-        button_action.clicked.connect(self.onMyToolBarButtonClick)
+        button_action.clicked.connect(self.pro1)
         
 
         button_action1 = QToolButton()
@@ -71,7 +76,7 @@ class MainWindow(QMainWindow,Ui_MainWindow):
 
         layout.addWidget(button_action)
         layout.addWidget(button_action1)
-        layout.addWidget(button_action2)
+        layout.addWidget(button_action2)                
         layout.addWidget(button_action3)        
         layout.addStretch()
         widget = QWidget()
@@ -111,6 +116,15 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.showMaximized()
 
 
+
+    def pro1(self,s):
+        self.informacion_empresa = information_company()
+
+    
+    def exitApp(self,s):
+        resultado = confirms("Esta seguro en salir de la aplicacion")
+        if (resultado.getResult()==1):
+            self.close()
 
     def onMyToolBarButtonClick(self,s):
         print("Click",s)

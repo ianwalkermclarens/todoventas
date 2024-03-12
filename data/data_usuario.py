@@ -1,6 +1,5 @@
 from librery.db import database
 from model.model_usuario import model_usuario
-from librery.db import database
 
 class data_usuario():
     def __init__(self):
